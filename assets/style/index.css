@@ -5,3 +5,16 @@
   margin-inline: auto;
   width: min(100% - 30px, 1080px);
 }
+
+.cookies {
+  background-color: #000;
+  border-radius: 15px;
+  height: 300px;
+  width: 250px;
+}
+
+.grid {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}

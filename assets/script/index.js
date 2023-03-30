@@ -105,6 +105,7 @@ buttonAccept.addEventListener('click', () => {
   console.log(getCookie('os'));
   console.log(getCookie('screen-width'));
   console.log(getCookie('screen-height'));
+  console.log(document.cookie);
   
   cookies.style.display = 'none';
 });
@@ -128,6 +129,7 @@ buttonSavePreferences.addEventListener('click', () => {
     setCookie('screen-height', getScreenHeight(), {'max-age': 10});
     console.log(getCookie('screen-height'));
   }
+  console.log(document.cookie);
   
   cookies.style.display = 'none';
 });

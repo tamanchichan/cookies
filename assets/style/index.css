@@ -3,18 +3,55 @@
 :root {
   --button-accept-bg-color: #3c57ff;
   --button-accept-color: #fff;
+  --button-save-preferences-bg-color: #3c57ff;
+  --button-save-preferences-color: #fff;
   --button-settings-border: 1px solid #3c57ff;
   --button-settings-color: #3c57ff;
   --button-settings-bg-hover: #3c57ff;
   --button-settings-color-hover: #fff;
 }
 
+/* html */
+input {
+  appearance: checkbox;
+}
+
 /* class */
+.button-accept {
+  background-color: var(--button-accept-bg-color);
+  border-radius: 20px;
+  color: var(--button-accept-color);
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+.button-save-preferences {
+  background-color: var(--button-save-preferences-bg-color);
+  border-radius: 20px;
+  color: var(--button-save-preferences-color);
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+.button-settings {
+  background-color: transparent;
+  border: var(--button-settings-border);
+  border-radius: 20px;
+  color: var(--button-settings-color);
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: all 0.25s ease-in-out;
+}
+
+.button-settings:hover {
+  background-color: var(--button-settings-bg-hover);
+  color: var(--button-settings-color-hover);
+}
+
 .container {
   margin-inline: auto;
   width: min(100% - 30px, 1080px);
 }
-
 
 .cookies {
   background-color: rgba(128, 128, 128, 0.5);
@@ -22,18 +59,15 @@
   width: 100vw;
 }
 
-.cookies-content {
+.cookies-box {
   background-color: #fff;
   border-radius: 15px;
   display: grid;
+  /* display: none; */
   height: 300px;
   padding: 20px;
   place-content: center;
   width: 250px;
-}
-
-.cookies-paragraph {
-  margin: 15px 0px;
 }
 
 .cookies-button {
@@ -41,31 +75,29 @@
   justify-content: space-between;
 }
 
+.cookies-content {
+  margin: 15px 0px;
+}
+
+.cookies-setting {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  width: 200px;
+}
+
+.cookies-settings {
+  background-color: #fff;
+  border-radius: 15px;
+  /* display: grid; */
+  display: none;
+  height: 300px;
+  place-content: center;
+  width: 250px;
+}
+
 .grid {
   display: grid;
   height: 100vh;
   place-content: center;
-}
-
-/* main */
-
-main .cookies .cookies-content .cookies-button .button-accept {
-  background-color: var(--button-accept-bg-color);
-  border-radius: 20px;
-  color: var(--button-accept-color);
-  padding: 10px 15px;
-}
-
-main .cookies .cookies-content .cookies-button .button-settings {
-  background-color: transparent;
-  border: var(--button-settings-border);
-  border-radius: 20px;
-  color: var(--button-settings-color);
-  padding: 10px 15px;
-  transition: all 0.25s ease-in-out;
-}
-
-main .cookies .cookies-content .cookies-button .button-settings:hover {
-  background-color: var(--button-settings-bg-hover);
-  color: var(--button-settings-color-hover);
 }

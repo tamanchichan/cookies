@@ -6,21 +6,6 @@ const cookies = document.querySelector('.cookies');
 const cookiesBox = document.querySelector('.cookies-box');
 const cookiesSettings = document.querySelector('.cookies-settings');
 
-if (document.cookie === '') {
-  cookies.style.display = 'block';
-} else {
-  cookies.style.display = 'none';
-};
-
-buttonAccept.addEventListener('click', () => {
-  cookies.style.display = 'none';
-});
-
-buttonSettings.addEventListener('click', () => {
-  cookiesBox.style.display = 'none';
-  cookiesSettings.style.display = 'grid';
-});
-
 function setCookie(name, value, options = {}) {
   options = {
     path: '/',
@@ -56,5 +41,38 @@ function deleteCookie(name) {
   setCookie(name, '', {'max-age': -1});
 }
 
+function getScreenHeight() {
+  return screen.height;
+};
+
+function getScreenWidth() {
+  return screen.width;
+};
+
+if (document.cookie === '') {
+  cookies.style.display = 'block';
+} else {
+  cookies.style.display = 'none';
+};
+
+buttonAccept.addEventListener('click', () => {
+  cookies.style.display = 'none';
+  
+  setCookie('screen-width', getScreenWidth(), {'max-age': 10});
+  setCookie('screen-height', getScreenHeight(), {'max-age': 10});
+});
+
+buttonSettings.addEventListener('click', () => {
+  cookiesBox.style.display = 'none';
+  cookiesSettings.style.display = 'grid';
+});
+
+console.log(navigator.userAgent);
+
 console.log(document.cookie ? 'Cookies available' : 'No cookies found');
-console.log(document.cookie);
+console.log('');
+console.log(getCookie('screen-width'));
+console.log(getCookie('screen-height'));
+
+// deleteCookie('screen-height');
+// deleteCookie('screen-width');

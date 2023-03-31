@@ -18,7 +18,7 @@
   <body>
     <!-- <header><div class='container'></div></header> -->
     <main>
-      <div class='cookies'>
+      <!-- <div class='cookies'>
         <div class='grid'>
           <div class='cookies-box'>
             <div class='cookies-title'>
@@ -63,6 +63,51 @@
             </div>
           </div>
         </div>
+      </div> -->
+      <div class='dialog'>
+        <dialog id='dialogOne'>
+          <div class='cookies-title'>
+            <h2>Cookies</h2>
+          </div>
+          <div class='cookies-content'>
+            <p>
+              We use cookies to improve your experience on our website. By
+              clicking "Accept", you agree to the use of cookies for marketing
+              and analystics purposes.
+            </p>
+          </div>
+          <div class='cookies-button'>
+            <button type='button' class='button-accept'>Accept</button>
+            <button type='button' class='button-settings'>Settings</button>
+          </div>
+        </dialog>
+      </div>
+      <div class='dialog'>
+        <dialog id='dialogTwo'>
+          <div class='cookies-title'>
+            <h2>Settings</h2>
+          </div>
+          <div class='cookies-content'>
+            <div class='cookies-setting'>
+              <label for='checkboxBrowser'>Browser</label>
+              <input type='checkbox' id='checkboxBrowser'>
+            </div>
+            <div class='cookies-setting'>
+              <label for='checkboxOs'>Operating System</label>
+              <input type='checkbox' id='checkboxOs'>
+            </div>
+            <div class='cookies-setting'>
+              <label for='checkboxScreenWidth'>Screen Width</label>
+              <input type='checkbox' id='checkboxScreenWidth'>
+            </div>
+            <div class='cookies-setting'>
+              <label for='checkboxScreenHeight'>Screen Height</label>
+              <input type='checkbox' id='checkboxScreenHeight'>
+            </div>
+            <div class='cookies-button'>
+              <button class='button-save-preferences'>Save Preferences</button>
+            </div>
+        </dialog>
       </div>
       <div class='container'></div>
     </main>

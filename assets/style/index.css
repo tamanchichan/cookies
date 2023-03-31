@@ -84,7 +84,6 @@ input {
 
 .cookies-content {
   display: grid;
-  height: 175px;
   margin: 10px 0px;
   place-content: center;
 }
@@ -108,6 +107,16 @@ input {
 
 .grid {
   display: grid;
-  height: 100vh;
+  /* height: 100vh; */
   place-content: center;
+}
+
+/* dialog */
+dialog {
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  /* height: 300px; */
+  margin: auto;
+  padding: 25px;
+  width: 310px;
 }

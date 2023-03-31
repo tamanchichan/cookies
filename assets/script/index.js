@@ -11,6 +11,9 @@ const cookies = document.querySelector('.cookies');
 const cookiesBox = document.querySelector('.cookies-box');
 const cookiesSettings = document.querySelector('.cookies-settings');
 
+const dialogOne = document.querySelector('#dialogOne');
+const dialogTwo = document.querySelector('#dialogTwo');
+
 checkboxBrowser.checked = true;
 checkboxOs.checked = true;
 checkboxScreenWidth.checked = true;
@@ -89,10 +92,16 @@ function getScreenHeight() {
   return screen.height;
 };
 
+// if (document.cookie === '') {
+//   cookies.style.display = 'block';
+// } else {
+//   cookies.style.display = 'none';
+// };
+
 if (document.cookie === '') {
-  cookies.style.display = 'block';
+  dialogOne.showModal();
 } else {
-  cookies.style.display = 'none';
+  dialogOne.close();
 };
 
 buttonAccept.addEventListener('click', () => {
@@ -107,12 +116,13 @@ buttonAccept.addEventListener('click', () => {
   console.log(getCookie('screen-height'));
   console.log(document.cookie);
   
-  cookies.style.display = 'none';
+  // cookies.style.display = 'none';
+  dialogOne.close();
 });
 
 buttonSettings.addEventListener('click', () => {
-  cookiesBox.style.display = 'none';
-  cookiesSettings.style.display = 'grid';
+  dialogOne.close();
+  dialogTwo.showModal();
 });
 
 buttonSavePreferences.addEventListener('click', () => {
@@ -131,7 +141,7 @@ buttonSavePreferences.addEventListener('click', () => {
   }
   console.log(document.cookie);
   
-  cookies.style.display = 'none';
+  dialogTwo.close();
 });
 
 // console.log(getCookie('browser'));

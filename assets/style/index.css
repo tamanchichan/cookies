@@ -18,8 +18,33 @@ body {
   background-size: cover;
 }
 
-input {
-  appearance: checkbox;
+input[type='checkbox'] {
+  background-color: #c6c6c6;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+  height: 30px;
+  width: 60px;
+}
+
+input:checked[type='checkbox'] {
+  background-color: #03a9f4;
+}
+
+input[type='checkbox']:before {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 30px;
+  position: absolute;
+  transform: scale(1.1);
+  transition: 0.25s;
+  width: 30px;
+}
+
+input:checked[type='checkbox']:before {
+  transition: 0.25s;
+  translate: 30px 0px;
 }
 
 /* class */
@@ -92,7 +117,7 @@ input {
   display: flex;
   justify-content: space-between;
   margin: 10px 0px;
-  width: 200px;
+  width: 250px;
 }
 
 .cookies-settings {
@@ -118,5 +143,5 @@ dialog {
   /* height: 300px; */
   margin: auto;
   padding: 25px;
-  width: 310px;
+  width: 300px;
 }
